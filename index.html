@@ -764,14 +764,21 @@
     var userLang = navigator.language || navigator.userLanguage; // Détecte la langue du navigateur
     var currentPage = window.location.pathname; // Récupère la page actuelle
 
-    if (userLang.startsWith("fr") && !currentPage.includes("indexFr.html")) {
-      window.location.href = "/indexFr.html"; // Redirige vers la version FR
-    } 
-    else if (!userLang.startsWith("fr") && !currentPage.includes("index.html")) {
-      window.location.href = ".index.html"; // Redirige vers la version EN
+    // Vérifier si l'utilisateur a déjà été redirigé pour éviter une boucle infinie
+    var redirected = sessionStorage.getItem("redirected");
+
+    if (!redirected) {
+      if (userLang.startsWith("fr") && !currentPage.includes("indexFr.html")) {
+        sessionStorage.setItem("redirected", "true"); // Marquer comme redirigé
+        window.location.href = "/indexFr.html";
+      } else if (!userLang.startsWith("fr") && !currentPage.includes("index.html")) {
+        sessionStorage.setItem("redirected", "true"); // Marquer comme redirigé
+        window.location.href = "/index.html";
+      }
     }
   })();
 </script>
+
 
 </body>
 </html>
