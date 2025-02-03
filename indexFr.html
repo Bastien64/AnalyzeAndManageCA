@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   
@@ -12,6 +12,20 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-10962901552');
+</script>
+<script>
+  (function() {
+    var userLang = navigator.language || navigator.userLanguage; // Détecte la langue du navigateur
+    if (userLang.startsWith("fr")) {
+      if (window.location.pathname !== "/indexFr.html") {
+        window.location.href = "indexFr.html";
+      }
+    } else {
+      if (window.location.pathname !== "/index.html") {
+        window.location.href = "index.html";
+      }
+    }
+  })();
 </script>
 
   <meta charset="UTF-8">
