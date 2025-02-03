@@ -762,16 +762,16 @@
 <script>
   (function() {
     var userLang = navigator.language || navigator.userLanguage; // Détecte la langue du navigateur
-    if (userLang.startsWith("fr")) {
-      if (window.location.pathname !== "/indexFr.html") {
-        window.location.href = "indexFr.html";
-      }
-    } else {
-      if (window.location.pathname !== "/index.html") {
-        window.location.href = "index.html";
-      }
+    var currentPage = window.location.pathname; // Récupère la page actuelle
+
+    if (userLang.startsWith("fr") && !currentPage.includes("indexFr.html")) {
+      window.location.href = "indexFr.html"; // Redirige vers la version FR
+    } 
+    else if (!userLang.startsWith("fr") && !currentPage.includes("index.html")) {
+      window.location.href = "index.html"; // Redirige vers la version EN
     }
   })();
 </script>
+
 </body>
 </html>
