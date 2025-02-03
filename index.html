@@ -765,10 +765,10 @@
     var currentPage = window.location.pathname; // Récupère la page actuelle
 
     if (userLang.startsWith("fr") && !currentPage.includes("indexFr.html")) {
-      window.location.href = "indexFr.html"; // Redirige vers la version FR
+      window.location.href = "/indexFr.html"; // Redirige vers la version FR
     } 
     else if (!userLang.startsWith("fr") && !currentPage.includes("index.html")) {
-      window.location.href = "index.html"; // Redirige vers la version EN
+      window.location.href = ".index.html"; // Redirige vers la version EN
     }
   })();
 </script>
