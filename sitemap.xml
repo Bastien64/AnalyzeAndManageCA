@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://www.analyzeandmanage.ca/</loc>
+        <lastmod>2024-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Pages principales -->
+    <url>
+        <loc>https://www.analyzeandmanage.ca/about-us</loc>
+        <lastmod>2024-02-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.analyzeandmanage.ca/contact-us</loc>
+        <lastmod>2024-11-09</lastmod>
+        <lastmod>2024-02-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    
+    <url>
+        <loc>https://www.analyzeandmanage.ca/contact-usservice
+        <lastmod>2024-02-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>
